@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325020045) do
+ActiveRecord::Schema.define(version: 20160325023224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,26 @@ ActiveRecord::Schema.define(version: 20160325020045) do
 
   add_index "contacts", ["user_id", "contact_id"], name: "index_contacts_on_user_id_and_contact_id", unique: true, using: :btree
   add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
+
+  create_table "conversations", force: :cascade do |t|
+    t.text     "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "giphs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "conversation_id"
+    t.text     "content"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.text     "email"
