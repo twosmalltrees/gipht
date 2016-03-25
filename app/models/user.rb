@@ -15,5 +15,5 @@ class User < ActiveRecord::Base
   has_many :contacts
   has_many :giphs
   has_and_belongs_to_many :conversations
-  has_many :messages, :through => :conversations
+  has_many :messages
 end
