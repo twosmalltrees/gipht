@@ -11,6 +11,19 @@
  * file per style scope.
  *
  */
- 
+
+ @import url(https://fonts.googleapis.com/css?family=Arvo);
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+ $body-bg: white;
+ $text-color: #2ecc71;
+ $font-family-sans-serif: "Open Sans";
+ $navbar-height: 60px;
+ $navbar-default-bg: #2ecc71;
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
+ @import "basic_styles";
+ @import "pages";
+ @import "users";

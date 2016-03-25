@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
 
   skip_before_action :require_login
+  layout "pre_sign_in"
 
   def new
   end
@@ -9,7 +10,7 @@ class SessionController < ApplicationController
     user = User.find_by :email => params[:email]
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path # Need to stop this redirecting to root, needs to go to some other path... 
+      redirect_to conversations_path
     else
       flash[:error] = "Login failed, please check yo details and try again."
       redirect_to login_path

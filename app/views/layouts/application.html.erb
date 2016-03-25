@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Gipht</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -10,21 +12,25 @@
 
     <%= yield %>
 
-    <nav id='navigation_controls' data-turbolinks-permanent>
-      <ul>
-        <a href="<%= conversations_path %>">
-          <li></li>
-        </a>
-        <a href="<%= contacts_path %>">
-          <li></li>
-        </a>
-        <a href="<%= giphs_path %>">
-          <li></li>
-        </a>
-        <a href="<%= edit_user_path %>">
-          <li></li>
-        </a>
-      </ul>
+    <nav id='navigation_controls' class="navbar navbar-default navbar-fixed-bottom" data-turbolinks-permanent>
+        <ul>
+          <a href="<%= conversations_path %>" class="col-xs-3 text-center selected">
+            <li><%= fa_icon "comments-o" %></li>
+            <p class="logo_label">CHATS</p>
+          </a>
+          <a href="<%= contacts_path %>" class="col-xs-3 text-center">
+            <li><%= fa_icon "users" %></li>
+            <p class="logo_label">FRIENDS</p>
+          </a>
+          <a href="<%= giphs_path %>" class="col-xs-3 text-center">
+            <li><%= fa_icon "picture-o" %></li>
+            <p class="logo_label">GIPHS</p>
+          </a>
+          <a href="<%= edit_user_path(@current_user) %>" class="col-xs-3 text-center">
+            <li><%= fa_icon "cogs" %></li>
+            <p class="logo_label">SETTINGS</p>
+          </a>
+        </ul>
     </nav>
 
   </body>

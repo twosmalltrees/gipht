@@ -1,0 +1,36 @@
+nav li {
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 8px 0 0 0;
+}
+
+nav li i{
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav a{
+  color: white;
+  a:hover {
+    color: grey;
+    text-decoration: none;
+  }
+}
+
+.selected {
+  background-color: #25a25a;
+}
+
+nav a:hover{
+  text-decoration: none;
+}
+
+.logo_label {
+  font-size: 9px;
+}
