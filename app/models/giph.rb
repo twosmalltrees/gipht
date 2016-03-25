@@ -10,4 +10,5 @@
 #
 
 class Giph < ActiveRecord::Base
+  belongs_to :user
 end
