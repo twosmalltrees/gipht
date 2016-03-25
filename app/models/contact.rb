@@ -2,6 +2,7 @@
 #
 # Table name: contacts
 #
+#  id         :integer          not null, primary key
 #  user_id    :integer
 #  contact_id :integer
 #  confirmed  :boolean

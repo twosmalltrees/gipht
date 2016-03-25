@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160325020045) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contacts", id: false, force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "contact_id"
     t.boolean  "confirmed"
