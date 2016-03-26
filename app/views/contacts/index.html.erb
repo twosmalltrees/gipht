@@ -1,0 +1,7 @@
+<div class="list-group">
+  <% @contacts.each do |contact| %>
+    <%= link_to(contact_path(contact), :class =>  "list-group-item") do %>
+      <%= contact.user.email %>
+    <% end %>
+  <% end %>
+</div>

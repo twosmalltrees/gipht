@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325034623) do
+ActiveRecord::Schema.define(version: 20160326003915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
+    t.integer  "owner_id"
     t.integer  "user_id"
-    t.integer  "contact_id"
     t.boolean  "confirmed",  default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
 
-  add_index "contacts", ["user_id", "contact_id"], name: "index_contacts_on_user_id_and_contact_id", unique: true, using: :btree
-  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
+  add_index "contacts", ["owner_id", "user_id"], name: "index_contacts_on_owner_id_and_user_id", unique: true, using: :btree
+  add_index "contacts", ["owner_id"], name: "index_contacts_on_owner_id", using: :btree
 
   create_table "conversations", force: :cascade do |t|
     t.text     "name"
