@@ -1,0 +1,15 @@
+<div class="list-group">
+  <% @conversations.each do |conversation| %>
+    <%= link_to(conversation_path(conversation), :class =>  "list-group-item") do %>
+      <% if conversation.name.present? %>
+        <h4 class="list-group-item-heading"><%= conversation.name %></h4>
+      <% else %>
+        <h4 class="list-group-item-heading">
+          <% conversation.users.each do |u| %>
+            <%= u.email %>,
+          <% end %>
+        </h4>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

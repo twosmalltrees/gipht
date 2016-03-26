@@ -11,10 +11,10 @@ User.destroy_all
 u1 = User.create :email => 'harrison@example.com', :password => 'chicken', :password_confirmation => 'chicken'
 u2 = User.create :email => 'josh@example.com', :password => 'chicken', :password_confirmation => 'chicken'
 u3 = User.create :email => 'brynley@example.com', :password => 'chicken', :password_confirmation => 'chicken'
-#
-# Contact.destroy_all
-# u1.contacts << (Contact.create :contact_id => u2.id)
-# u1.contacts << (Contact.create :contact_id => u3.id)
+
+Contact.destroy_all
+Contact.create :user_id => u1.id, :contact_id => u2.id
+Contact.create :user_id => u1.id, :contact_id => u3.id
 
 Conversation.destroy_all
 c1 = Conversation.create :name => 'South Street'
