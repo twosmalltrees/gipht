@@ -1,0 +1,5 @@
+<%= link_to "New Gif", new_giph_path %>
+
+<% @giphs.each do |giph| %>
+  <%= image_tag giph.gif.url %>
+<% end %>
