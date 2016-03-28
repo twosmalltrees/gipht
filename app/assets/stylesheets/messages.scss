@@ -1,3 +1,31 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.compose_msg_container {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  bottom: 60px;
+  background-color: #69dd9b;
+}
+
+.msg_input_container {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 13px 5px 9px 8px;
+  left: 0;
+  top: 0;
+}
+
+.record_gif_btn_container {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 13px 8px 9px 5px;
+  left: 75%;
+  top: 0;
+}

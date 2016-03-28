@@ -1,0 +1,27 @@
+<% @messages.each do |message| %>
+  <% if message.gif_type == 'giphy' %>
+    <%= link_to(image_tag(message.giphy_downsampled_url), message_path(message)) %>
+  <% end  %>
+<% end %>
+
+<div class="compose_msg_container">
+  <%= form_tag messages_path, :remote => false do %>
+  <div class="msg_input_container">
+
+    <div class="input-group">
+      <%= text_field_tag :gif_text, nil, :placeholder => "Translate with Giphy", :required => true, :class => "form-control input-sm", :autocomplete => :off %>
+
+      <span class="input-group-btn">
+        <%= button_tag(:class => "btn btn-default btn-sm") do %>
+        <%= fa_icon "paper-plane" %>
+        <% end %>
+      </span>
+
+    </div>
+  </div>
+  <%= hidden_field_tag 'source', 'translate' %>
+  <% end %>
+  <div class="record_gif_btn_container">
+    <%= button_to "NEW GIF" , giph_path, :class => "btn btn-block btn-default btn-sm" %>
+  </div>
+</div>

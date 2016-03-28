@@ -31,6 +31,12 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'font-awesome-rails'
 
+gem 'httparty'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+gem 'aws-sdk', '~> 2'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

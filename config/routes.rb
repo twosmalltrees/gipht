@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :conversations
   resources :contacts
   resources :giphs
+  resources :messages
 
   get '/sign_up' => 'users#new'
 

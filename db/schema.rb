@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326003915) do
+ActiveRecord::Schema.define(version: 20160328015138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 20160326003915) do
 
   create_table "messages", force: :cascade do |t|
     t.integer  "conversation_id"
-    t.text     "content"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.text     "gif_identifier"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "user_id"
+    t.text     "gif_type"
+    t.text     "giphy_downsampled_url"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,8 +60,12 @@ ActiveRecord::Schema.define(version: 20160326003915) do
     t.text     "username"
     t.text     "password_digest"
     t.text     "profile_pic"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
