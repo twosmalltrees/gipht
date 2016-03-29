@@ -10,6 +10,4 @@ class MessagesController < ApplicationController
       redirect_to conversation_path(@current_conversation)
     end
   end
-
-
 end

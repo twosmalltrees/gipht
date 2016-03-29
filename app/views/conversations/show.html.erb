@@ -1,10 +1,22 @@
 <% @messages.each do |message| %>
-  <% if message.gif_type == 'giphy' %>
-    <%= link_to(image_tag(message.giphy_downsampled_url), message_path(message)) %>
-  <% end  %>
+  <div class="message_container <%= message.user == @current_user ? 'user_message' : 'friend_message' %>">
+      <div class="avatar_small">
+        <%= image_tag(message.user.avatar.url) %>
+      </div>
+      <div class="talk-bubble tri-right <%= message.user == @current_user ? 'left-top' : 'right-top' %>">
+        <%# if message.gif_type == 'giphy' %>
+            <%= link_to(image_tag(message.giphy_downsampled_url), message_path(message)) %>
+        <%# end  %>
+      </div>
+  </div>
 <% end %>
 
 <div class="compose_msg_container">
+
+  <div class="record_gif_btn_container">
+    <%= link_to "RECORD GIF" , new_giph_path, :class => "btn btn-block btn-success btn-sm" %>
+  </div>
+
   <%= form_tag messages_path, :remote => false do %>
   <div class="msg_input_container">
 
@@ -21,7 +33,5 @@
   </div>
   <%= hidden_field_tag 'source', 'translate' %>
   <% end %>
-  <div class="record_gif_btn_container">
-    <%= button_to "NEW GIF" , giph_path, :class => "btn btn-block btn-default btn-sm" %>
-  </div>
+
 </div>

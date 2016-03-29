@@ -12,7 +12,7 @@
 
 .msg_input_container {
   position: absolute;
-  width: 75%;
+  width: 50%;
   height: 100%;
   box-sizing: border-box;
   padding: 13px 5px 9px 8px;
@@ -22,10 +22,103 @@
 
 .record_gif_btn_container {
   position: absolute;
-  width: 25%;
+  width: 50%;
   height: 100%;
   box-sizing: border-box;
   padding: 13px 8px 9px 5px;
-  left: 75%;
+  left: 50%;
   top: 0;
 }
+
+.message_container {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+.user_message {
+  flex-direction: row;
+  padding-left: 10px
+}
+
+.friend_message {
+  flex-direction: row-reverse;
+  padding-right: 10px;
+}
+
+.avatar_small {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 0;
+}
+.avatar_small img{
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+
+///////// TALK BUBBLES ////////////
+
+
+.talk-bubble {
+	margin: 0px 20px 0 20px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+	width: auto;
+	height: auto;
+  border-radius: 5px;
+}
+
+
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -13px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 13px solid;
+	border-color: #3498db transparent transparent transparent;
+}
+
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  right: -13px;
+  left: auto;
+  top: 0px;
+	bottom: auto;
+	border: 13px solid;
+	border-color: #2ecc71 transparent transparent transparent;
+}
+
+.left-top {
+  background-color: #3498db;
+}
+
+.right-top {
+  background-color: #2ecc71;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+
+///////// END TALK BUBBLES ///////////

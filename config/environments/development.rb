@@ -47,8 +47,6 @@ Rails.application.configure do
   :s3_host_name => 's3-ap-southeast-2.amazonaws.com',
   :s3_credentials => {
     :bucket => 'gipht',
-    :access_key_id => 'AKIAJTZZE2IMMIRG2E2A',
-    :secret_access_key => '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'
   }
 }
 
