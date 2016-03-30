@@ -28,6 +28,14 @@ class ConversationsController < ApplicationController
     @conversations = @current_user.conversations
   end
 
+  def edit
+    @conversation = Conversation.find(params[:id])
+    @contacts_collection = []
+    @current_user.contacts.each do |contact|
+      contact_option = [User.find(contact.user_id).username, contact.user_id]
+      @contacts_collection << contact_option
+    end
+  end
 
   def show
     if authorised_conversation?

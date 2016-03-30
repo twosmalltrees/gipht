@@ -38,7 +38,7 @@ joel = User.create :email => 'joel@example.com', :username => 'Joel', :password 
 Contact.destroy_all
 User.all.each do |user|
   User.all.each do |user_to_add|
-    user.contacts.create(:owner_id => user.id, :user_id => user_to_add.id)
+    user.contacts.create(:owner_id => user.id, :user_id => user_to_add.id) unless user.id == user_to_add.id
   end
 end
 

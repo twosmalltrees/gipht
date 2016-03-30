@@ -8,30 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="<%= params[:controller]+"_"+params[:action] %>">
+  <body>
+    <div class="app_container <%= params[:controller]+"_"+params[:action] %>">
 
-    <%= yield %>
+      <%= yield %>
 
-    <nav id='navigation_controls' class="navbar navbar-default navbar-fixed-bottom" data-turbolinks-permanent>
-        <ul>
-          <a href="<%= conversations_path %>" class="col-xs-3 text-center selected">
-            <li><%= fa_icon "comments-o" %></li>
-            <p class="logo_label">CHATS</p>
-          </a>
-          <a href="<%= contacts_path %>" class="col-xs-3 text-center">
-            <li><%= fa_icon "users" %></li>
-            <p class="logo_label">CONTACTS</p>
-          </a>
-          <a href="<%= giphs_path %>" class="col-xs-3 text-center">
-            <li><%= fa_icon "picture-o" %></li>
-            <p class="logo_label">MY GIFS</p>
-          </a>
-          <a href="<%= edit_user_path(@current_user) %>" class="col-xs-3 text-center">
-            <li><%= fa_icon "cogs" %></li>
-            <p class="logo_label">SETTINGS</p>
-          </a>
-        </ul>
-    </nav>
-
+      <nav id='navigation_controls' class="navbar navbar-default navbar-fixed-bottom" data-turbolinks-permanent>
+          <ul>
+            <a href="<%= conversations_path %>" class="col-xs-3 text-center selected">
+              <li><%= fa_icon "comments-o" %></li>
+              <p class="logo_label">CHATS</p>
+            </a>
+            <a href="<%= contacts_path %>" class="col-xs-3 text-center">
+              <li><%= fa_icon "users" %></li>
+              <p class="logo_label">CONTACTS</p>
+            </a>
+            <a href="<%= giphs_path %>" class="col-xs-3 text-center">
+              <li><%= fa_icon "picture-o" %></li>
+              <p class="logo_label">MY GIFS</p>
+            </a>
+            <a href="<%= edit_user_path(@current_user) %>" class="col-xs-3 text-center">
+              <li><%= fa_icon "cogs" %></li>
+              <p class="logo_label">SETTINGS</p>
+            </a>
+          </ul>
+      </nav>
+    </div>
   </body>
 </html>

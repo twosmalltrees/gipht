@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gipht</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" media="all" href="/assets/application.self-7bbef6e651c3a0551ce8772e7c190a9525a194f6be16329c249267dad6468e55.css?body=1" data-turbolinks-track="true" />
+    <script src="/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/lib/abstract-chosen.self-ae1c122c0e745b3cfd9391626fe72e18ba53fc83b4be42295f4a122a0d7c8290.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/lib/select-parser.self-5d5368d17f7cdcd87e6de78a152edb0e8bb03d0d645563f4076921a10855fd67.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/chosen.jquery.self-f379509b58cd593992e98bc4ea51d00e2f5023a16e4ca534eb1a5934bffb3332.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/chosen-jquery.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/chosen_select.self-76b11221fb68b0dfd24dbe0be845fae16186e35e241d8d99daed4dbe5ea4bd09.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/conversations.self-ca4a37db5a0fa948f557befe0abb8f20a2fc5beebf248f142c0694fb5d5188f3.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/gifshot.min.self-2f4857abe889af0afc7760881c88fb1f91ebcf8c301230c9e325715970490606.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/giph_selection.self-daed14b676fcc72c4f8c685786af884eccf25d31ee85ea6c00c83dfcba00754e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/giphs.self-f31ae36ecde0b7292be06791916551fdf259535a745d4b9e88680b4bfdb3090c.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" data-turbolinks-track="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="YFxve4FTgKYRwAM0rywClGi8GBXZtizERY33FfcITfw1vtpxa+CzvYyQ9DQLe7wfH41FZ7oWzhW+kphc3yraMw==" />
+  </head>
+  <body>
+    <div class="app_container conversations_show">
+
+        <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/110"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/022/original/data?1459233238" alt="Data?1459233238" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/111"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/012/original/data?1459230186" alt="Data?1459230186" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/112"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/029/original/data?1459337640" alt="Data?1459337640" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/113"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/032/original/data?1459337802" alt="Data?1459337802" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/114"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/028/original/data?1459314724" alt="Data?1459314724" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/115"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/033/original/data?1459337862" alt="Data?1459337862" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/116"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/036/original/data?1459338622" alt="Data?1459338622" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/117"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/031/original/data?1459337753" alt="Data?1459337753" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/118"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/020/original/data?1459233023" alt="Data?1459233023" /></a>
+      </div>
+  </div>
+  <div class="message_container user_message">
+      <div class="avatar_small">
+        <img src="http://s3-ap-southeast-2.amazonaws.com/gipht/users/avatars/000/000/015/original/Me.png?1459212160" alt="Me" />
+      </div>
+      <div class="talk-bubble tri-right left-top">
+            <a href="/messages/119"><img class="gif_image" src="http://s3-ap-southeast-2.amazonaws.com/gipht/giphs/gifs/000/000/027/original/data?1459312117" alt="Data?1459312117" /></a>
+      </div>
+  </div>
+
+
+
+  <div class="circle_button_success third_button">
+    <i class="fa fa-pencil"></i>
+  </div>
+
+  <a href="/giphs/select">
+    <div class="circle_button_success second_button">
+      <i class="fa fa-picture-o"></i>
+    </div>
+</a>
+  <a href="/giphs/new?origin=conversation">
+    <div class="circle_button_success">
+      <i class="fa fa-video-camera"></i>
+    </div>
+</a>
+  <form action="/messages" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RSg802kZqSCehYUSRKIQRlfoxXPdlIbzVO+aCrEC+voQyonZg6qaOwPVchLg9a7NINmYAb40ZCKv8PVDmSBtNQ==" />
+  <div class="msg_input_container">
+
+    <div class="input-group">
+      <input type="text" name="gif_text" id="gif_text" placeholder="Translate with Giphy" required="required" class="form-control input-sm" autocomplete="off" />
+
+      <span class="input-group-btn">
+        <button name="button" type="submit" class="btn btn-default btn-sm">
+        <i class="fa fa-paper-plane"></i>
+</button>      </span>
+
+    </div>
+  </div>
+  <input type="hidden" name="source" id="source" value="translate" />
+</form>
+
+      <nav id='navigation_controls' class="navbar navbar-default navbar-fixed-bottom" data-turbolinks-permanent>
+          <ul>
+            <a href="/conversations" class="col-xs-3 text-center selected">
+              <li><i class="fa fa-comments-o"></i></li>
+              <p class="logo_label">CHATS</p>
+            </a>
+            <a href="/contacts" class="col-xs-3 text-center">
+              <li><i class="fa fa-users"></i></li>
+              <p class="logo_label">CONTACTS</p>
+            </a>
+            <a href="/giphs" class="col-xs-3 text-center">
+              <li><i class="fa fa-picture-o"></i></li>
+              <p class="logo_label">MY GIFS</p>
+            </a>
+            <a href="/users/15/edit" class="col-xs-3 text-center">
+              <li><i class="fa fa-cogs"></i></li>
+              <p class="logo_label">SETTINGS</p>
+            </a>
+          </ul>
+      </nav>
+    </div>
+  </body>
+</html>

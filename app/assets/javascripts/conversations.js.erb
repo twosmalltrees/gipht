@@ -23,19 +23,19 @@ var toRun = function() {
           endlessScroll.pageNumber += 1;
           var old_height = $(document).height();
           var old_scroll = $(window).scrollTop();
-          $('body').prepend(response);
+          $('.app_container').prepend(response);
           $(window).scrollTop(old_scroll + $(document).height() - old_height);
           endlessScroll.addMessageReloadListener();
           // $(window).scrollTop($(response).height())
         },
         error: function(response) {
-        
+
         }
       });
     },
     addMessageReloadListener: function() {
       var reload_timer = setInterval(function() {
-        if (($('body.conversations_show').length !== 0) && ($(window).scrollTop() < 100)) {
+        if (($('.app_container.conversations_show').length !== 0) && ($(window).scrollTop() < 100)) {
           endlessScroll.requestBatch();
           clearInterval(reload_timer);
         }
@@ -43,7 +43,7 @@ var toRun = function() {
     }
   };
 
-  if ($('body.conversations_show').length !== 0) {
+  if ($('.app_container.conversations_show').length !== 0) {
     endlessScroll.scrollToBottom();
     endlessScroll.addMessageReloadListener();
   }

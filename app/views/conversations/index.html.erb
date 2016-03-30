@@ -1,6 +1,7 @@
 <div class="list-group">
   <% @conversations.each do |conversation| %>
-    <%= link_to(conversation_path(conversation), :class =>  "list-group-item") do %>
+  <div class="list-group-item">
+    <%= link_to conversation_path(conversation) do %>
 
       <% conversation.users.first(3).each do |user| %>
         <div class="avatar_tiny">
@@ -11,13 +12,16 @@
       <% if conversation.name.present? %>
         <%= conversation.name %>
       <% else %>
-
           <% conversation.users.each do |u| %>
             <%= u.username %>,
           <% end %>
-
       <% end %>
     <% end %>
+
+    <%= link_to(edit_conversation_path(conversation), :class => "edit_conversation_button") do %>
+        <%= fa_icon "gear" %>
+    <% end %>
+    </div>
   <% end %>
 </div>
 
