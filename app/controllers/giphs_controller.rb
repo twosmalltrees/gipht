@@ -6,20 +6,25 @@ class GiphsController < ApplicationController
 
   def new
     @giph = Giph.new
+    @origin = params[:origin]
     # require 'pry'
     # binding.pry
   end
 
   def create
-    gif = Giph.create(gif_params)
-    @current_user.giphs << gif
-    # redirect_to conversations_path
+    newGif = Giph.create(gif_params)
+    @current_user.giphs << newGif
 
+    if params[:require_send] == "true"
+        @current_conversation.messages.create :gif_type => "native", :gif_identifier => newGif.id, :giphy_downsampled_url => newGif.gif.url, :user_id => @current_user.id
+        redirect_to conversation_path(@current_conversation)
+    else
+        redirect_to giphs_path
+    end
+  end
 
-    flash[:gif] = gif.id
-    redirect_to conversation_path( Conversation.find( session[:conversation_id] ) )
-
-
+  def select
+    @giphs = @current_user.giphs
   end
 
   private

@@ -12,9 +12,10 @@
   </button>
 
   <%= form_for(@giph) do |f| %>
+     <%= hidden_field_tag :require_send,  "true" if @origin == "conversation" %>
      <%= f.hidden_field :gif, :id => "gif_data" %>
      <%= f.button(:class => "gif_save_button btn btn-success btn-lg btn-block hidden") do %>
-       <%= fa_icon 'save' %> Save GIF
+       <%= fa_icon 'save' %> <%= (@origin == "conversation") ? "SAVE AND SEND GIF" : "SAVE GIF" %>
      <% end %>
   <% end %>
 

@@ -8,9 +8,6 @@
     padding: 0 0 0 0;
 }
 
-#webcam_feed{
-
-}
 
 .make_gif_display{
   display: block;
@@ -18,4 +15,36 @@
   max-width: 450px;
   margin: 20px auto 20px auto;
   border-radius: 7px;
+}
+
+.giph_index_img_container {
+  width: 100%;
+  max-width: 260px;
+  margin: 20px auto 20px auto;
+  padding: 10px;
+  background-color: #3498db;
+  border-radius: 10px;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.giph_select_img_container {
+  width: 100%;
+  max-width: 260px;
+  margin: 20px auto 20px auto;
+  padding: 10px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  cursor: pointer;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.selected_giph {
+  background-color: #e67e22;
+  cursor: default;
 }

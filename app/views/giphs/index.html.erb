@@ -1,5 +1,14 @@
-<%= link_to "New Gif", new_giph_path %>
 
-<% @giphs.each do |giph| %>
-  <%= image_tag giph.gif.url %>
+
+  <% @giphs.reverse.each do |giph| %>
+  <div class="giph_index_img_container">
+    <%= image_tag giph.gif.url %>
+  </div>
+  <% end %>
+
+
+<%= link_to new_giph_path do %>
+  <div class="circle_button_success">
+    <%= fa_icon "video-camera" %>
+  </div>
 <% end %>

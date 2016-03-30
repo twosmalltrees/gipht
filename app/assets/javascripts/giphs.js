@@ -41,6 +41,15 @@ var gifShotFunctions = {
     $('.gif_record_button').on('click', function() {
       gifShotFunctions.recordGif();
     });
+
+    $('.gif_discard_button').on('click', function() {
+      $('.gif_display').html("");
+      $('.gif_record_button').removeClass('hidden');
+      $('.gif_discard_button').addClass('hidden');
+      $('.gif_save_button').addClass('hidden');
+      $('#webcam_feed').show();
+      $('#gif_data').attr('value', image);
+    });
   }
 };
 

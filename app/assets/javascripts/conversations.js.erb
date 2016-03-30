@@ -1,0 +1,53 @@
+
+// Scroll to page bottom on load, but only if body class matches...
+
+
+
+
+
+// NEED TO CHANGE THESE, TWO SEPERATE READY FNS
+var toRun = function() {
+
+  var endlessScroll = {
+    scrollToBottom: function() {
+      var windowHeight = $(window).height();
+      $(window).scrollTop(99999999999999);
+    },
+    pageNumber: 1,
+    requestBatch: function() {
+      var url = [location.pathname];
+      $.ajax({
+        url: url + "?page=" + endlessScroll.pageNumber,
+        type: 'get',
+        success: function(response) {
+          endlessScroll.pageNumber += 1;
+          var old_height = $(document).height();
+          var old_scroll = $(window).scrollTop();
+          $('body').prepend(response);
+          $(window).scrollTop(old_scroll + $(document).height() - old_height);
+          endlessScroll.addMessageReloadListener();
+          // $(window).scrollTop($(response).height())
+        },
+        error: function(response) {
+        
+        }
+      });
+    },
+    addMessageReloadListener: function() {
+      var reload_timer = setInterval(function() {
+        if (($('body.conversations_show').length !== 0) && ($(window).scrollTop() < 100)) {
+          endlessScroll.requestBatch();
+          clearInterval(reload_timer);
+        }
+      }, 1000)
+    }
+  };
+
+  if ($('body.conversations_show').length !== 0) {
+    endlessScroll.scrollToBottom();
+    endlessScroll.addMessageReloadListener();
+  }
+};
+
+$(document).ready(toRun);
+$(document).on('page:load', toRun);

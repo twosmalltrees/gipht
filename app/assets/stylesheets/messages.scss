@@ -51,9 +51,22 @@
   vertical-align: middle;
   margin: 0 0 0 0;
 }
+
 .avatar_small img{
   width: 40px;
   height: 40px;
+  border-radius: 4px;
+}
+
+.avatar_tiny {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 0;
+}
+
+.avatar_tiny img{
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
 }
 
@@ -105,6 +118,12 @@
 
 .right-top {
   background-color: #2ecc71;
+}
+
+.gif_image {
+  height: 145px;
+  min-width: 110px;
+  max-width: 280px;
 }
 
 /* talk bubble contents */

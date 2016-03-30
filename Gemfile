@@ -37,6 +37,8 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
 gem 'aws-sdk', '~> 2'
 
+gem 'chosen-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

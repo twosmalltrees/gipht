@@ -1,0 +1,17 @@
+
+<%= flash[:error] %>
+
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center sign_up">Add Contact</h2>
+
+  <%= form_tag contacts_path do |f| %>
+    <div class="form-group">
+      <%= label_tag :email %>
+      <%= email_field_tag "email", nil, :class => "form-control", :placeholder => "Email", :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "Add Contact", :class => "btn btn-default btn-block" %>
+    </div>
+  <% end  %>
+</div>

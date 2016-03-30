@@ -29,7 +29,9 @@
  @import "users";
  @import "messages";
  @import "giphs";
-
+ @import "chosen";
+ @import "conversations"
+;
 body{
-  margin-bottom: 150px;
+  margin-bottom: 160px;
 }

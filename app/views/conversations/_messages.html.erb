@@ -1,0 +1,12 @@
+<% @messages.each do |message| %>
+  <div class="message_container <%= message.user == @current_user ? 'user_message' : 'friend_message' %>">
+      <div class="avatar_small">
+        <%= image_tag(message.user.avatar.url) %>
+      </div>
+      <div class="talk-bubble tri-right <%= message.user == @current_user ? 'left-top' : 'right-top' %>">
+        <%# if message.gif_type == 'giphy' %>
+            <%= link_to(image_tag(message.giphy_downsampled_url, :class => "gif_image"), message_path(message)) %>
+        <%# end  %>
+      </div>
+  </div>
+<% end %>

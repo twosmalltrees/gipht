@@ -14,5 +14,5 @@ class Contact < ActiveRecord::Base
   belongs_to :owner, :class_name => 'User'
   belongs_to :user
   validates :user, :presence => true
-  validates :contact_id, :presence => true, :uniqueness => { :scope => :user_id }
+  validates :user_id, :presence => true, :uniqueness => { :scope => :owner_id }
 end
