@@ -6,8 +6,8 @@
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 80px;
-  right: 20px;
+  bottom: 75px;
+  right: 10px;
   border-radius: 50%;
   text-align: center;
   font-size: 25px;
@@ -21,17 +21,11 @@
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 80px;
-  right: 90px;
+  bottom: 75px;
+  right: 75px;
 }
 
-.third_button {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 80px;
-  right: 160px;
-}
+
 
 .edit_conversation_button {
     display: inline-block;
@@ -46,4 +40,42 @@
     text-align: center;
     border-radius: 10px;
     float: right;
+}
+
+.translate_form {
+  width: 165px;
+  height: 60px;
+  position: fixed;
+  bottom: 75px;
+  right: 140px;
+  border: none;
+  background-color: #2ecc71;
+  border-radius: 30px;
+  padding-top: 16px;
+  padding-left: 17px;
+  div {
+    font-size: 20px;
+    left: 101px;
+    top: -30px;
+    position: relative;
+    width: 32px;
+  }
+  button:focus, input:focus {
+    outline: none;
+  }
+  input {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: white;
+    color: grey;
+    width: 97px;
+    font-size: 13px;
+    text-align: center;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    color: white;
+  }
 }

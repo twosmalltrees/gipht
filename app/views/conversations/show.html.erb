@@ -1,9 +1,6 @@
 <%= render :partial => 'messages' %>
 
 
-  <div class="circle_button_success third_button">
-    <%= fa_icon "pencil" %>
-  </div>
 
   <%= link_to giph_select_path do %>
     <div class="circle_button_success second_button">
@@ -17,19 +14,16 @@
     </div>
   <% end %>
 
-  <%= form_tag messages_path, :remote => false do %>
-  <div class="msg_input_container">
+  <%= form_tag messages_path, :class => 'translate_form', :remote => false do %>
 
-    <div class="input-group">
-      <%= text_field_tag :gif_text, nil, :placeholder => "Translate with Giphy", :required => true, :class => "form-control input-sm", :autocomplete => :off %>
 
-      <span class="input-group-btn">
-        <%= button_tag(:class => "btn btn-default btn-sm") do %>
+      <%= text_field_tag :gif_text, nil, :placeholder => "Translate", :required => true, :autocomplete => :off %>
+
+      <div>
+        <%= button_tag do %>
         <%= fa_icon "paper-plane" %>
         <% end %>
-      </span>
+      </div>
 
-    </div>
-  </div>
   <%= hidden_field_tag 'source', 'translate' %>
   <% end %>

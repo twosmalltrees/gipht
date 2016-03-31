@@ -36,7 +36,7 @@ nav a:hover{
 }
 
 .app_container {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
@@ -44,24 +44,31 @@ nav a:hover{
   display: none;
 }
 
-@media (min-width: 800px) {
+nav a:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #2ab766;
+}
+
+@media (min-width: 900px) {
 
   .app_container {
     position: absolute;
     right: 0;
     top: 0;
-    width: 60%;
+    width: 75%;
+    margin-bottom: 140px;
   }
 
   #navigation_controls {
-    width: 60%;
+    width: 75%;
     bottom: 0;
-    left: 40%;
+    left: 25%;
   }
 
   .static_sidebar {
     display: block;
-    width: 40%;
+    width: 25%;
     height: 100%;
     position: fixed;
     left: 0;
@@ -71,6 +78,16 @@ nav a:hover{
     -moz-box-shadow: -4px 0px 20px 3px rgba(12,48,14,1);
     box-shadow: -4px 0px 20px 3px rgba(12,48,14,1);
     z-index: 1000000;
+  }
+
+  .branding {
+    font-family: "Arvo";
+    font-size: 70px;
+    color: white;
+    position: fixed;
+    width: 25%;
+    top: 40%;
+    text-align: center;
   }
 
 
