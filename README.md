@@ -14,6 +14,6 @@ Gipht is built around a number of Gems, Libraries and API's. The most important 
 * [Paperclip](https://github.com/thoughtbot/paperclip) - Paperclip is used in conjunction with Amazon S3 for image upload, to store user generated GIF's and profile images.
 
 Limitations
-___________
+-----------
 
 Regrettably the GIF record function is not currently available on Safari or Safari iOS, as these browsers don't support getUserMedia. Use Chrome.
