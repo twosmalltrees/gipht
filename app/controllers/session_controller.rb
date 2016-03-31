@@ -13,8 +13,8 @@ class SessionController < ApplicationController
       session[:user_id] = user.id
       redirect_to conversations_path
     else
-      flash[:error] = "Login failed, please check yo details and try again."
-      redirect_to login_path
+      flash[:error] = "Login failed, please check your details and try again."
+      redirect_to sign_in_path
     end
   end
 

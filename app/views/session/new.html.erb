@@ -1,6 +1,10 @@
 <div class="col-md-4 col-md-offset-4">
   <h2 class="text-center sign_up">Sign In</h2>
 
+  <% if flash[:error].present? %>
+    <div class="alert alert-danger" role="alert"><%= flash[:error] %></div>
+  <% end %>
+
   <%= form_tag sign_in_path do %>
     <div class="form-group">
       <%= label_tag :email %>
