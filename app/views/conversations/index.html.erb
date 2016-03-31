@@ -11,7 +11,7 @@
       <% else %>
         <% conversation.messages.last(4).each do |message| %>
           <div class="avatar_tiny">
-              <%= image_tag(message.user.avatar.url) %>
+              <%= image_tag(message.user.avatar.url(:thumb)) %>
           </div>
         <% end %>
       <% end %>
