@@ -6,8 +6,14 @@
   </ol>
 <% end %>
 
-<div class="col-md-10 col-md-offset-1">
-  <h2 class="text-center sign_up">Account Settings</h2>
+
+
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center">Account Settings</h2>
+
+  <%= link_to "Sign Out", sign_in_path, :method => :delete, :class => "btn btn-danger btn-block bt-lg" %>
+
+  <h3 class="text-center">- or update account -</h3>
 
   <%= form_for(@user) do |f| %>
     <div class="form-group">
@@ -37,7 +43,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.submit "Update Account", :class => "btn btn-default btn-block" %>
+      <%= f.submit "Update Account", :class => "btn btn-success btn-block" %>
     </div>
   <% end  %>
 </div>

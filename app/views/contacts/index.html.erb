@@ -1,9 +1,12 @@
+<h2 class="text-center sign_up">Contacts</h2>
 <div class="list-group">
   <% @contacts.each do |contact| %>
     <%= link_to(contact_path(contact), :class =>  "list-group-item") do %>
+    <div class="avatar_wrapper">
       <div class="avatar_small">
         <%= image_tag(contact.user.avatar.url) %>
       </div>
+    </div>
       <%= contact.user.username %>
     <% end %>
   <% end %>

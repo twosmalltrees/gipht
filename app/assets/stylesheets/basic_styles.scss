@@ -38,6 +38,8 @@ nav a:hover{
 .app_container {
   min-height: 100%;
   width: 100%;
+  margin-bottom: 150px;
+
 }
 
 .static_sidebar {
@@ -50,6 +52,7 @@ nav a:hover{
   background-color: #2ab766;
 }
 
+
 @media (min-width: 900px) {
 
   .app_container {
@@ -57,7 +60,7 @@ nav a:hover{
     right: 0;
     top: 0;
     width: 75%;
-    margin-bottom: 140px;
+    margin-bottom: 150px;
   }
 
   #navigation_controls {
@@ -88,6 +91,25 @@ nav a:hover{
     width: 25%;
     top: 40%;
     text-align: center;
+  }
+
+  h2 {
+    margin-top: 55px;
+    margin-bottom: 47px;
+    color: lightgrey;
+    font-family: "Arvo";
+  }
+
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: lightgrey;
+    font-family: "Arvo";
+    font-size: 20px;
+  }
+
+  label {
+    color: grey;
   }
 
 

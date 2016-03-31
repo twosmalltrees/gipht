@@ -1,11 +1,11 @@
-
-
+<h2 class="text-center"> My Giphs </h2>
+<div class="giph_index_container">
   <% @giphs.reverse.each do |giph| %>
   <div class="giph_index_img_container">
     <%= image_tag giph.gif.url %>
   </div>
   <% end %>
-
+</div>
 
 <%= link_to new_giph_path do %>
   <div class="circle_button_success">

@@ -1,3 +1,5 @@
+<h2 class="text-center">Record Giph</h2>
+
 <div class="col-md-4 col-md-offset-4">
   <div class="video_container">
       <video autoplay="true" id="webcam_feed" class="make_gif_display">
@@ -15,7 +17,7 @@
      <%= hidden_field_tag :require_send,  "true" if @origin == "conversation" %>
      <%= f.hidden_field :gif, :id => "gif_data" %>
      <%= f.button(:class => "gif_save_button btn btn-success btn-lg btn-block hidden") do %>
-       <%= fa_icon 'save' %> <%= (@origin == "conversation") ? "SAVE AND SEND GIF" : "SAVE GIF" %>
+       <%= fa_icon 'save' %> <%= (@origin == "conversation") ? "Save and Send" : "Save" %>
      <% end %>
   <% end %>
 

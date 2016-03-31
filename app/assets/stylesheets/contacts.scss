@@ -1,3 +1,18 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+img.contact_show {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+.contact_delete {
+margin: 50px auto 0 auto;
+display: block;
+width: 80%;
+max-width: 300px;
+}

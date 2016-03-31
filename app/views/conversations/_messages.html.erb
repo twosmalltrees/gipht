@@ -5,7 +5,7 @@
       </div>
       <div class="talk-bubble tri-right <%= message.user == @current_user ? 'left-top' : 'right-top' %>">
         <%# if message.gif_type == 'giphy' %>
-            <%= link_to(image_tag(message.giphy_downsampled_url, :class => "gif_image"), message_path(message)) %>
+            <%= image_tag(message.giphy_downsampled_url, :class => "gif_image") %>
         <%# end  %>
       </div>
   </div>

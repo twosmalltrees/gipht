@@ -1,5 +1,5 @@
-
-<div class="avatar_small">
-  <%= image_tag(@contact.user.avatar.url) %>
+<h2 class="text-center"><%= @contact.user.username %></h2>
+<div class="col-md-4 col-md-offset-4">
+  <%= image_tag(@contact.user.avatar.url, :class => "contact_show") %>
+  <%= link_to "Delete Contact", contact_path(@contact), :method => :delete, :class => "btn btn-danger contact_delete" %>
 </div>
-<%= @contact.user.username %>

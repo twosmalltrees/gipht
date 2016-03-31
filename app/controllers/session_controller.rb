@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
 
   skip_before_action :require_login
+  before_action :redirect_if_logged_in, :only => [:new]
   layout "pre_sign_in"
 
   def new

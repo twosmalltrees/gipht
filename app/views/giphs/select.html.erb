@@ -1,8 +1,11 @@
-<% @giphs.reverse.each do |giph| %>
-  <div class="giph_select_img_container" data-giph-id="<%= giph.id %>">
-    <%= image_tag giph.gif.url %>
-  </div>
-<% end %>
+<h2 class="text-center">Select Giph</h2>
+<div class="giph_index_container">
+  <% @giphs.reverse.each do |giph| %>
+    <div class="giph_select_img_container" data-giph-id="<%= giph.id %>">
+      <%= image_tag giph.gif.url %>
+    </div>
+  <% end %>
+</div>
 
 <%= form_tag messages_path do %>
   <%= hidden_field_tag :source, 'giph_select'  %>

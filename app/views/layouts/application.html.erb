@@ -21,19 +21,19 @@
 
       <nav id='navigation_controls' class="navbar navbar-default navbar-fixed-bottom" data-turbolinks-permanent>
           <ul>
-            <a href="<%= conversations_path %>" class="col-xs-3 text-center selected">
+            <a href="<%= conversations_path %>" class="col-xs-3 text-center <%= " selected" if controller_name == 'conversations' %>">
               <li><%= fa_icon "comments-o" %></li>
               <p class="logo_label">CHATS</p>
             </a>
-            <a href="<%= contacts_path %>" class="col-xs-3 text-center">
+            <a href="<%= contacts_path %>" class="col-xs-3 text-center <%= " selected" if controller_name == 'contacts' %>">
               <li><%= fa_icon "users" %></li>
               <p class="logo_label">CONTACTS</p>
             </a>
-            <a href="<%= giphs_path %>" class="col-xs-3 text-center">
+            <a href="<%= giphs_path %>" class="col-xs-3 text-center <%= " selected" if controller_name == 'giphs' %>">
               <li><%= fa_icon "picture-o" %></li>
               <p class="logo_label">MY GIFS</p>
             </a>
-            <a href="<%= edit_user_path(@current_user) %>" class="col-xs-3 text-center">
+            <a href="<%= edit_user_path(@current_user) %>" class="col-xs-3 text-center <%= " selected" if controller_name == 'users' %>">
               <li><%= fa_icon "cogs" %></li>
               <p class="logo_label">SETTINGS</p>
             </a>

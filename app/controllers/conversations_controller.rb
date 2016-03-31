@@ -25,7 +25,7 @@ class ConversationsController < ApplicationController
   end
 
   def index
-    @conversations = @current_user.conversations
+    @conversations = @current_user.conversations.all.order(updated_at: :desc)
   end
 
   def edit

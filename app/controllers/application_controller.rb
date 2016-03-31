@@ -24,4 +24,10 @@ private
     end
   end
 
+  def redirect_if_logged_in
+    if session[:user_id].present?
+      redirect_to conversations_path
+    end
+  end
+
 end

@@ -25,6 +25,25 @@
   right: 75px;
 }
 
+.recent_talkers {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.conversation_name {
+  max-width: 75%;
+  margin-left: 20px;
+}
+
 
 
 .edit_conversation_button {

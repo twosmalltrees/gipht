@@ -17,6 +17,7 @@ class GiphsController < ApplicationController
 
     if params[:require_send] == "true"
         @current_conversation.messages.create :gif_type => "native", :gif_identifier => newGif.id, :giphy_downsampled_url => newGif.gif.url, :user_id => @current_user.id
+        @current_conversation.touch
         redirect_to conversation_path(@current_conversation)
     else
         redirect_to giphs_path

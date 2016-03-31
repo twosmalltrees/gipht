@@ -1,20 +1,33 @@
+<h2 class="text-center">Chats</h2>
 <div class="list-group">
   <% @conversations.each do |conversation| %>
     <%= link_to(conversation_path(conversation), :class =>  "list-group-item") do %>
 
-      <% conversation.users.first(3).each do |user| %>
-        <div class="avatar_tiny">
-          <%= image_tag(user.avatar.url) %>
+    <div class="recent_talkers">
+      <% if conversation.messages.count < 4 %>
+        <div class="avatar_small">
+          <%= image_tag("avatar_missing.png") %>
         </div>
+      <% else %>
+        <% conversation.messages.last(4).each do |message| %>
+          <div class="avatar_tiny">
+              <%= image_tag(message.user.avatar.url) %>
+          </div>
+        <% end %>
       <% end %>
 
+    </div>
+
+    <div class="conversation_name">
       <% if conversation.name.present? %>
         <%= conversation.name %>
       <% else %>
           <% conversation.users.each do |u| %>
-            <%= u.username %>,
+            <%= u.username unless u == @current_user %><%= "," unless u == @current_user || u == conversation.users.last %>
           <% end %>
       <% end %>
+    </div>
+
     <% end %>
 
 
