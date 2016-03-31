@@ -52,6 +52,25 @@ nav a:hover{
   background-color: #2ab766;
 }
 
+h2 {
+  margin-top: 55px;
+  margin-bottom: 47px;
+  color: lightgrey;
+  font-family: "Arvo";
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: lightgrey;
+  font-family: "Arvo";
+  font-size: 20px;
+}
+
+label {
+  color: grey;
+}
+
 
 @media (min-width: 900px) {
 
@@ -93,24 +112,6 @@ nav a:hover{
     text-align: center;
   }
 
-  h2 {
-    margin-top: 55px;
-    margin-bottom: 47px;
-    color: lightgrey;
-    font-family: "Arvo";
-  }
-
-  h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: lightgrey;
-    font-family: "Arvo";
-    font-size: 20px;
-  }
-
-  label {
-    color: grey;
-  }
 
 
 }
