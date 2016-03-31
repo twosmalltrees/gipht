@@ -1,7 +1,6 @@
 <div class="list-group">
   <% @conversations.each do |conversation| %>
-  <div class="list-group-item">
-    <%= link_to conversation_path(conversation) do %>
+    <%= link_to(conversation_path(conversation), :class =>  "list-group-item") do %>
 
       <% conversation.users.first(3).each do |user| %>
         <div class="avatar_tiny">
@@ -18,12 +17,8 @@
       <% end %>
     <% end %>
 
-    <%= link_to(edit_conversation_path(conversation), :class => "edit_conversation_button") do %>
-        <%= fa_icon "gear" %>
-    <% end %>
-    </div>
+
   <% end %>
-</div>
 
 
 <%= link_to new_conversation_path do %>

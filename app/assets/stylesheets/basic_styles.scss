@@ -39,3 +39,39 @@ nav a:hover{
   height: 100%;
   width: 100%;
 }
+
+.static_sidebar {
+  display: none;
+}
+
+@media (min-width: 800px) {
+
+  .app_container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+  }
+
+  #navigation_controls {
+    width: 60%;
+    bottom: 0;
+    left: 40%;
+  }
+
+  .static_sidebar {
+    display: block;
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #2ecc71;
+    -webkit-box-shadow: -4px 0px 20px 3px rgba(12,48,14,1);
+    -moz-box-shadow: -4px 0px 20px 3px rgba(12,48,14,1);
+    box-shadow: -4px 0px 20px 3px rgba(12,48,14,1);
+    z-index: 1000000;
+  }
+
+
+}
