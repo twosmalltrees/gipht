@@ -7,7 +7,7 @@
 <%= form_tag messages_path do %>
   <%= hidden_field_tag :source, 'giph_select'  %>
   <%= hidden_field_tag :giph_id, ''  %>
-  <%= button_tag do %>
+  <%= button_tag :class => "button_hide" do %>
     <div class="circle_button_success">
       <%= fa_icon "send" %>
     </div>
