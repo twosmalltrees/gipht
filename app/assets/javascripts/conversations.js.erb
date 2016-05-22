@@ -26,7 +26,6 @@ var toRun = function() {
           $('.app_container').prepend(response);
           $(window).scrollTop(old_scroll + $(document).height() - old_height);
           endlessScroll.addMessageReloadListener();
-          // $(window).scrollTop($(response).height())
         },
         error: function(response) {
 
